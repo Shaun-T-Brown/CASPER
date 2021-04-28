@@ -15,6 +15,9 @@ def smooth_kspace(k,R,mu,beta):
     y=1/(1+(10**mu*k*R/2.50)**(beta*3.12))
     return(y)
 
+def FT_spherical_top_hat(k,R):
+    y=3*(np.sin(k*R)-k*R*np.cos(k*R))/(k*R)**3
+    return(y)
 
 def density_rms(R,pk, window_function,*filter_args):
 
@@ -32,6 +35,7 @@ def peak_height(pk,M,h,omega_m,window_function,*filter_args):
     R=(M/(4/3*np.pi*rho_mean))**(1/3)
 
     rms=density_rms(R,pk,window_function,*filter_args)
+
     peak_height=1.68/rms**0.5
 
     return(peak_height)
@@ -39,17 +43,17 @@ def peak_height(pk,M,h,omega_m,window_function,*filter_args):
 def casper(M,pk,omega_m,h,return_peak_height=False):
 
     #best fit window function for concentration
-    beta_c=2; mu_c=-0.75
+    beta_c=2; mu_c=-0.55
 
     #best fit window function for the shape parameter
-    beta_alpha=2; mu_alpha=-0.35
+    beta_alpha=2; mu_alpha=0.0
 
     #calcate peak heights for the two window functions 
     nu_c=peak_height(pk,M,h,omega_m,smooth_kspace,mu_c,beta_c)
     nu_alpha=peak_height(pk,M,h,omega_m,smooth_kspace,mu_alpha,beta_alpha)
 
-    c=3.89*nu_c**(-0.87)
-    alpha=0.0028*nu_alpha**6+0.16
+    c=4.39*nu_c**(-0.96)
+    alpha=0.0019*nu_alpha**4+0.167
 
     if return_peak_height==False:
         return(c,alpha)
