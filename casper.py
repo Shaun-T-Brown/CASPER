@@ -36,18 +36,26 @@ def Critical_density():
 def smooth_kspace(k,R,mu,beta):
     """Smooth k-space window function."""
 
-    y=1/(1+(10**mu*k*R/2.50)**(beta*3.12))
+    y=1/(1+(mu*k*R/2.50)**(beta*3.12))
     return(y)
 
-def FT_spherical_top_hat(k,R):
+def spherical_top_hat(k,R):
     """Spherical top hat window function"""
 
     y=3*(np.sin(k*R)-k*R*np.cos(k*R))/(k*R)**3
     return(y)
 
+def spherical_top_hat_generalised(k,R,mu_g):
+    """Spherical top hat window function"""
+
+    y=3*(np.sin(mu_g*k*R)-mu_g*k*R*np.cos(mu_g*k*R))/(mu_g*k*R)**3
+    return(y)
+
 def density_rms(R,pk, window_function,*filter_args):
 
-    """Function to calculate the peak height.
+    """
+
+    Function to calculate the peak height.
 
     Parameters:
 
@@ -79,7 +87,9 @@ def density_rms(R,pk, window_function,*filter_args):
 
 
 def peak_height(pk,M,omega_m,window_function,*filter_args):
-    """Function to calculate the peak height.
+    """
+
+    Function to calculate the peak height.
 
     Parameters:
 
@@ -115,7 +125,9 @@ def peak_height(pk,M,omega_m,window_function,*filter_args):
     return(peak_height)
 
 def casper(M,pk,omega_m,return_peak_height=False):
-    """Function to calculate the concentration and shape parameter for a given 
+    """
+
+    Function to calculate the concentration and shape parameter for a given 
     mass, redshift and cosmology.
 
     Parameters:
@@ -156,17 +168,17 @@ def casper(M,pk,omega_m,return_peak_height=False):
 
 
     #best fit window function for concentration
-    beta_c=2; mu_c=-0.65
+    mu_c=10**(-0.67)
 
     #best fit window function for the shape parameter
-    beta_alpha=2; mu_alpha=0.0
+    mu_alpha=10**(-0.01)
 
-    nu_c=peak_height(pk,M,omega_m,smooth_kspace,mu_c,beta_c)
-    nu_alpha=peak_height(pk,M,omega_m,smooth_kspace,mu_alpha,beta_alpha)
+    nu_c=peak_height(pk, M, omega_m, spherical_top_hat_generalised, mu_c)
+    nu_alpha=peak_height(pk, M, omega_m, spherical_top_hat_generalised, mu_alpha)
 
 
-    c=4.18*nu_c**(-0.87)
-    alpha=0.0011*nu_alpha**4+0.166
+    c=4.39*nu_c**(-0.87)
+    alpha=8.52*10**(-4)*nu_alpha**4+0.166
 
     if return_peak_height==False:
         return(c,alpha)
@@ -177,33 +189,3 @@ def casper(M,pk,omega_m,return_peak_height=False):
 
 
 
-# r=np.logspace(-4,0,1000)
-
-# rho=Einasto_density(r,1,5,0.18)
-
-# r_sample=np.logspace(-2,0,100)
-# print(r_sample)
-# M_less_int=np.empty(len(r_sample))
-# for i in range(len(r_sample)):
-#     rr=np.logspace(-4,np.log10(r_sample[i]),10000)
-#     rho_r=Einasto_density(rr,1,5,0.18)
-#     M_less_int[i]=np.trapz(4*np.pi*rr**2*rho_r,rr)
-
-# M_less_int/=Einasto_mass(1,5,0.18)
-# M_less=Einasto_mass(r_sample,5,0.18)/Einasto_mass(1,5,0.18)
-
-# plt.figure()
-# plt.plot(r,rho)
-
-# plt.xscale('log')
-# plt.yscale('log')
-
-
-# print(r_sample)
-# plt.figure()
-# plt.plot(r_sample,M_less_int)
-# plt.plot(r_sample,M_less)
-# plt.xscale('log')
-# plt.yscale('log')
-
-# plt.show()
