@@ -22,7 +22,7 @@ To use the main functionality of the package (i.e. to predict c and alpha) you w
 
 ### Usage
 
-The best way to demonstrate how Casper can be used is with a few examples. An interactive jupyter notebook with all necessary modules available can be found on [Binder](https://hub.gke2.mybinder.org/user/shaun-t-brown-casper-example-p5rakgnz/notebooks/example_script.ipynb). A static version of the same notebook can be found within the examples folder.
+The best way to demonstrate how Casper can be used is with a few examples. An interactive jupyter notebook with all necessary modules available can be found on [Binder](https://mybinder.org/v2/gh/Shaun-T-Brown/CASPER-example.git/HEAD?filepath=.%2Fexample_script.ipynb). A static version of the same notebook can be found within the examples folder.
 
 The functionality of the package is relatively straightforward and is essentially a collection of useful functions centered around the density profiles of dark matter haloes. Basic documentation can be generated using *pydoc*.
 
