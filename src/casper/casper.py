@@ -2,7 +2,6 @@ import numpy as np
 from scipy import integrate 
 from scipy import special
 
-import matplotlib.pyplot as plt 
 
 def Einasto_density(r,rho_s,c,alpha):
     """Function to generate an Einasto density profile"""
