@@ -18,7 +18,7 @@ git clone https://github.com/Shaun-T-Brown/CASPER.git
 
 and add the folder (specifically src) to your python path. This method will also require scipy and numpy to be installed. Using pip will automatically install all dependencies.
 
-To use the main functionality of the package (i.e. to predict c and alpha) you will need to be able to generate the linear power spectra for a given cosmology. In principle this can be done using any accurate method. However, we recommend installing and using [CAMB](https://camb.readthedocs.io/en/latest/).
+To use the main functionality of the package (i.e. to predict c and alpha) you will need to be able to generate a linear power spectrum for a given cosmology. In principle this can be done using any accurate method. However, we recommend installing and using [CAMB](https://camb.readthedocs.io/en/latest/).
 
 ### Usage
 
@@ -36,7 +36,7 @@ help(casper)
 
 ### Acknowledging the code
 
-If the results of this code, particularly the predictions for halo concentration and the shape parameter then please acknowledge and cite the original [paper]() appropriately.
+If the results of this code, particularly the predictions for halo concentration and the shape parameter, are used in any published work then please acknowledge and cite the original [paper]() appropriately.
 
 The following bibtex entry may be used:
 
