@@ -2,6 +2,12 @@
 
 Casper is a python package aimed at predicting the concentration and shape parameter of dark matter haloes as a function of mass and redshift for a specified cosmology.
 
+### Requirements
+
+The module requires the following:
+
+- python3.6 or higher
+
 ### Installation
 
 The easiest way to install Casper is using pip:
@@ -18,17 +24,17 @@ git clone https://github.com/Shaun-T-Brown/CASPER.git
 
 and add the folder (specifically src) to your python path. This method will also require scipy and numpy to be installed. Using pip will automatically install all dependencies.
 
-To use the main functionality of the package (i.e. to predict c and alpha) you will need to be able to generate the linear power spectra for a given cosmology. In principle this can be done using any accurate method. However, we recommend installing and using [CAMB](https://camb.readthedocs.io/en/latest/).
+To use the main functionality of the package (i.e. to predict c and alpha) you will need to be able to generate the linear power spectra for a given cosmology. In principle this can be done using any reliable method. However, we recommend installing and using [CAMB](https://camb.readthedocs.io/en/latest/).
 
 ### Usage
 
-The best way to demonstrate how Casper can be used is with a few examples. An interactive jupyter notebook with all necessary modules available can be found on [Binder](https://mybinder.org/v2/gh/Shaun-T-Brown/CASPER-example.git/HEAD?filepath=.%2Fexample_script.ipynb). A static version of the same notebook can be found within the examples folder.
+The best way to demonstrate how Casper can be used is with a few examples. An interactive jupyter notebook with all necessary modules available can be found on [Binder](https://mybinder.org/v2/gh/Shaun-T-Brown/CASPER-example.git/HEAD?filepath=.%2Fexample_script.ipynb). A static version of the same notebook can be found at the following github [repository](https://github.com/Shaun-T-Brown/CASPER-example.git), specifically in the file *example_script.ipynb*.
 
 The functionality of the package is relatively straightforward and is essentially a collection of useful functions centered around the density profiles of dark matter haloes. Basic documentation can be generated using *pydoc*.
 
 
 ```
-from casper import casper
+import casper
 
 help(casper)
 ```
@@ -42,5 +48,7 @@ The following bibtex entry may be used:
 
 ```
 ```
+
+For any questions and enquires please contact me via email at *S.T.Brown@2018.ljmu.ac.uk*
 
 
