@@ -224,17 +224,17 @@ def casper(M,pk,omega_m,return_peak_height=False):
     nu_alpha_max=3.445
 
     if np.min(nu_c)<nu_c_min:
-        wn.warn('The minimum value of nu_c used for calibration was %.3f. You have requested a value smaller than this, the reliablity/accuracy of the model may be reduced in this regime.'%(nu_c_min))
-
+        wn.warn("The minimum value of nu_c used for calibration was %.3f. You have requested a minimum value of %.3f, the reliablity/accuracy of the model may be reduced in this regime."%(nu_c_min,np.min(nu_c)), stacklevel = 1)
+        
     if np.max(nu_c)>nu_c_max:
-        wn.warn('The maximum value of nu_c used for calibration was %.3f. You have requested a value larger than this, the reliablity/accuracy of the model may be reduced in this regime.'%(nu_c_max))
-
-    if np.min(nu_c)<nu_alpha_min:
-        wn.warn('The minimum value of nu_alpha used for calibration was %.3f. You have requested a value smaller than this, the reliablity/accuracy of the model may be reduced in this regime.'%(nu_alpha_min))
-
-    if np.max(nu_c)>nu_alpha_max:
-        wn.warn('The maximum value of nu_alpha used for calibration was %.3f. You have requested a value larger than this, the reliablity/accuracy of the model may be reduced in this regime.'%(nu_alpha_max))
-    
+        wn.warn("The maximum value of nu_c used for calibration was %.3f. You have requested a maximum value of %.3f, the reliablity/accuracy of the model may be reduced in this regime."%(nu_c_max,np.max(nu_c)), stacklevel = 1)
+        
+    if np.min(nu_alpha)<nu_alpha_min:
+        wn.warn("The minimum value of nu_alpha used for calibration was %.3f. You have requested a minimum value of %.3f, the reliablity/accuracy of the model may be reduced in this regime."%(nu_alpha_min,np.min(nu_alpha)), stacklevel = 1)
+        
+    if np.max(nu_alpha)>nu_alpha_max:
+        wn.warn("The maximum value of nu_alpha used for calibration was %.3f. You have requested a maximum value of %.3f, the reliablity/accuracy of the model may be reduced in this regime."%(nu_alpha_max,np.max(nu_alpha)), stacklevel = 1)
+        
     #empirical fits
     c=4.39*nu_c**(-0.87)
     alpha=8.52*10**(-4)*nu_alpha**4+0.166
