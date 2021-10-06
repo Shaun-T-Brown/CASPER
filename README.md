@@ -44,11 +44,19 @@ help(casper)
 
 ### Acknowledging the code
 
-If the results of this code, particularly the predictions for halo concentration and the shape parameter, are used in any published work then please acknowledge and cite the original [paper]() appropriately.
+If the results of this code, particularly the predictions for halo concentration and the shape parameter, are used in any published work then please acknowledge and cite the original [paper](https://arxiv.org/abs/2110.01632) appropriately.
 
 The following bibtex entry may be used:
 
 ```
+@misc{brown2021universal,
+      title={Towards a universal model for the density profiles of dark matter haloes}, 
+      author={Shaun T. Brown and Ian G. McCarthy and Sam G. Stafford and Andreea S. Font},
+      year={2021},
+      eprint={2110.01632},
+      archivePrefix={arXiv},
+      primaryClass={astro-ph.CO}
+}
 ```
 
 For any questions and enquires please contact me via email at *S.T.Brown@2018.ljmu.ac.uk*
