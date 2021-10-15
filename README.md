@@ -49,7 +49,7 @@ If the results of this code, particularly the predictions for halo concentration
 The following bibtex entry may be used:
 
 ```
-@misc{brown2021universal,
+@misc{Brown2021,
       title={Towards a universal model for the density profiles of dark matter haloes}, 
       author={Shaun T. Brown and Ian G. McCarthy and Sam G. Stafford and Andreea S. Font},
       year={2021},
