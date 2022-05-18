@@ -67,7 +67,14 @@ def Critical_density():
     
     return(rho_crit)
 
-
+def kmax(M,omega_m):
+    """Function to calculate the maximum k value to generate the linear power spectrum 
+    numerical convergence. This k-scale will ensure that the peak heigh values are 
+    converged to with at least 1% (likely ~0.1%). This only works for the window funciton
+    used in the main model, other window function will require diffrence convergence criteria."""
+    kmax_calc=2*10**5*(omega_m/(0.309*np.min(M)))**(1/3)
+    
+    return(kmax_calc)
 
 def smooth_kspace(k,R,mu,beta):
     """Smooth k-space window function."""
