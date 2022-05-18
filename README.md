@@ -49,13 +49,22 @@ If the results of this code, particularly the predictions for halo concentration
 The following bibtex entry may be used:
 
 ```
-@misc{Brown2021,
-      title={Towards a universal model for the density profiles of dark matter haloes}, 
-      author={Shaun T. Brown and Ian G. McCarthy and Sam G. Stafford and Andreea S. Font},
-      year={2021},
-      eprint={2110.01632},
-      archivePrefix={arXiv},
-      primaryClass={astro-ph.CO}
+@ARTICLE{2022MNRAS.509.5685B,
+       author = {{Brown}, Shaun T. and {McCarthy}, Ian G. and {Stafford}, Sam G. and {Font}, Andreea S.},
+        title = "{Towards a universal model for the density profiles of dark matter haloes}",
+      journal = {\mnras},
+     keywords = {methods: numerical, cosmology: theory, dark matter, Astrophysics - Cosmology and Nongalactic Astrophysics, Astrophysics - Astrophysics of Galaxies},
+         year = 2022,
+        month = feb,
+       volume = {509},
+       number = {4},
+        pages = {5685-5701},
+          doi = {10.1093/mnras/stab3394},
+archivePrefix = {arXiv},
+       eprint = {2110.01632},
+ primaryClass = {astro-ph.CO},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.5685B},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 ```
 
