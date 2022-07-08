@@ -30,7 +30,7 @@ To use the main functionality of the package (i.e. to predict c and alpha) you w
 
 ### Usage
 
-The best way to demonstrate how Casper can be used is with a few examples. An interactive jupyter notebook with all necessary modules available can be found on [Binder](https://mybinder.org/v2/gh/Shaun-T-Brown/CASPER-example.git/HEAD?filepath=.%2Fexample_script.ipynb). A static version of the same notebook can be found at the following github [repository](https://github.com/Shaun-T-Brown/CASPER-example.git), specifically in the file *example_script.ipynb*.
+The best way to demonstrate how Casper can be used is with a few examples. An interactive jupyter notebook with all necessary modules available can be found on [Binder](https://mybinder.org/v2/gh/Shaun-T-Brown/CASPER-example.git/HEAD?filepath=.%2Fexample_script.ipynb). The Binder notebook can sometimes take a long time to load, a static version of the same notebook can be found at the following github [repository](https://github.com/Shaun-T-Brown/CASPER-example.git), specifically in the file *example_script.ipynb*.
 
 The functionality of the package is relatively straightforward and is essentially a collection of useful functions centered around the density profiles of dark matter haloes. Basic documentation can be generated using *pydoc*.
 
