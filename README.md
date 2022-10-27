@@ -68,6 +68,6 @@ archivePrefix = {arXiv},
 }
 ```
 
-For any questions and enquires please contact me via email at *S.T.Brown@2018.ljmu.ac.uk*
+For any questions and enquires please contact me via email at *Shaun.T.Brown@durham.ac.uk*
 
 
